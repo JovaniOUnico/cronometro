@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cronometro Po Modoro</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+  <script type="module" src="js/index.js"></script>
+</head>
+<body style="background-image: url(assets/bg.jpg);">
+  <div class='container-fluid text-light' id='listaComponentes'>
+    <div class='row justify-content-md-center'>
+      <div class="col-md-auto p-3">
+        <h3 class="text-center">Cronômetro de Tarefas</h3>
+        <img src="assets/cron.png" class="img-fluid" alt="...">
+      </div>
+    </div>
+    <div class='row justify-content-md-center'>
+      <div class="col-md-auto">
+        <div class="p-4 task-new">
+          <div class="row justify-content-between">
+            <div class='col-8'>
+              <div class="input-group mb-3">
+                <span class="input-group-text" for="tarefaNome">Nome da Tarefa</span>
+                <input type="text" id="tarefaNome" class="form-control" placeholder="Pentear Macacos" aria-label="task-add" aria-describedby="basic-addon1">&nbsp;
+              </div>
+            </div>
+            <div class='col-2'>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" id="nova_tasks" class="btn btn-primary">Iniciar</button>
+                <button type="button" class="btn btn-secondary">
+                  Config
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    new task
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='row justify-content-md-center'>
+      <div class="col-md-auto">
+        <h3> <span class="hour" data-id="0">00</span>:<span class="minute" data-id="0">00</span>:<span class="second" data-id="0">00</span>:<span class="millisecond" data-id="0">000</span></h3>
+      </div>
+    </div>
+  </div>
+
+
+  <div class='row model-new-task d-none bg-info text-light' style='cursor: pointer'>
+    <div class="col">
+      <div class="p-4 task-active">
+        <div class="row p-3 justify-content-md-center">
+          <div class='col-2'>
+            <span class='task-name' data-id="">Task Name</span>
+          </div>
+          <div class='col-6'>
+            <button class='btn'>
+              <span class='task-dia-inicio text-light' data-id="">18/09/2021</span><i class="bi bi-align-bottom"></i>
+              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Data Inicio</span>
+            </button>
+  
+            <button class='btn'>
+              <span class="task-horario-inicio text-light">19:03:30</span><i class="bi bi-align-bottom"></i>
+              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Horário Inicio</span>
+            </button>
+  
+            <button class='btn'>
+              <span class="text-light hour" data-id="">00</span>:<span class="text-light minute" data-id="">00</span>:<span class="text-light second" data-id="">00</span>:<span class="text-light millisecond" data-id="">000</span><i class="bi bi-align-bottom"></i>
+              <span style="top: -10px" class="text-light position-relative translate-middle badge rounded-pill bg-danger">Tempo Duração</span>
+            </button>
+          </div>
+          <div class='col-2'>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn text-light btn-primary reset-task" data-id="">Reiniciar</button>
+              <button type="button" class="btn text-light btn-primary stop-task" data-id="">Parar</button>
+              <button type="button" class="btn btn-danger remove-task" data-id="">  Excluir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='row d-none'>
+    <div class="col">
+      <div class="p-4 task-active">
+        <div style="background-color: #38ef7d;" class="row p-3 justify-content-md-center border border-primary rounded">
+          <div class='col-2'>
+            Task Name
+          </div>
+          <div class='col-6'>
+            <button class='btn'>
+              18/09/2021<i class="bi bi-align-bottom"></i>
+              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Data Inicio</span>
+            </button>
+
+            <button class='btn'>
+              19:03:30<i class="bi bi-align-bottom"></i>
+              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Horário Inicio</span>
+            </button>
+
+            <button class='btn'>
+              00:20:03<i class="bi bi-align-bottom"></i>
+              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Tempo Duração</span>
+            </button>
+          </div>
+          <div class='col-2'>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">Reiniciar</button>
+              <button type="button" class="btn btn-primary">Parar</button>
+              <button type="button" class="btn btn-primary">Trash</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
