@@ -44,6 +44,13 @@ $(document).ready(function(){
     //adiciona div clonada a lista
     $('#listaComponentes').append(contadorDiv);
 
+    $('#selectedTask').find('.hour').attr('data-id', id);
+    $('#selectedTask').find('.minute').attr('data-id', id);
+    $('#selectedTask').find('.second').attr('data-id', id);
+    $('#selectedTask').find('.millisecond').attr('data-id', id);
+
+    $('#selectedTaskName').text(cont.titulo)
+
     let teste = (obj = undefined) => {
 
       $(`.hour[data-id=${obj.id}]`).text(returnData(obj.hour));

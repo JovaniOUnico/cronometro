@@ -10,7 +10,6 @@ class Contador {
     return aux;
   }
 
-
   constructor (titulo){
     this.id = Contador.getIdCount();
 

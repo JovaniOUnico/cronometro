@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="UTF-8">
   <title>Cronometro Po Modoro</title>
+
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
   <script type="module" src="js/index.js"></script>
+
 </head>
 <body style="background-image: url(assets/bg.jpg);">
   <div class='container-fluid text-light' id='listaComponentes'>
+
     <div class='row justify-content-md-center'>
-      <div class="col-md-auto p-3">
+      <div class="col-md-12 m-3">
         <h3 class="text-center">Cronômetro de Tarefas</h3>
-        <img src="assets/cron.png" class="img-fluid" alt="...">
+      </div>
+      <div class="col-md-2 p-3">
+        <a href="https://pt.vecteezy.com/free-png-pt/cron%C3%B4metro">
+          <img src="assets/cron.png" class="img-fluid" alt="Cronômetro PNGs por Vecteezy">
+        </a>
       </div>
     </div>
+
     <div class='row justify-content-md-center'>
       <div class="col-md-auto">
         <div class="p-4 task-new">
@@ -41,11 +52,24 @@
         </div>
       </div>
     </div>
+
     <div class='row justify-content-md-center'>
-      <div class="col-md-auto">
-        <h3> <span class="hour" data-id="0">00</span>:<span class="minute" data-id="0">00</span>:<span class="second" data-id="0">00</span>:<span class="millisecond" data-id="0">000</span></h3>
+      <div class="col-md-auto mb-3">
+        <div class="selected-task-container d-flex" id="selectedTaskContainer">
+          <span id="selectedTaskName">Task Selected</span>
+          <h5 class="selected-task-time" id="selectedTask">
+            <span class="hour" data-id="0">00</span>
+            :
+            <span class="minute" data-id="0">00</span>
+            :
+            <span class="second" data-id="0">00</span>
+            :
+            <span class="millisecond" data-id="0">000</span>
+          </h5>
+        </div>
       </div>
     </div>
+
   </div>
 
 
@@ -56,22 +80,30 @@
           <div class='col-2'>
             <span class='task-name' data-id="">Task Name</span>
           </div>
-          <div class='col-6'>
+
+          <div class='col-6 d-flex'>
             <button class='btn'>
               <span class='task-dia-inicio text-light' data-id="">18/09/2021</span><i class="bi bi-align-bottom"></i>
-              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Data Inicio</span>
+              <span class="simple-badge">
+                Data Inicio
+              </span>
             </button>
   
             <button class='btn'>
               <span class="task-horario-inicio text-light">19:03:30</span><i class="bi bi-align-bottom"></i>
-              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Horário Inicio</span>
+              <span class="simple-badge">
+                Horário Inicio
+              </span>
             </button>
   
-            <button class='btn'>
+            <button class='btn text-light'>
               <span class="text-light hour" data-id="">00</span>:<span class="text-light minute" data-id="">00</span>:<span class="text-light second" data-id="">00</span>:<span class="text-light millisecond" data-id="">000</span><i class="bi bi-align-bottom"></i>
-              <span style="top: -10px" class="text-light position-relative translate-middle badge rounded-pill bg-danger">Tempo Duração</span>
+              <span class="text-light simple-badge">
+                Tempo Duração
+              </span>
             </button>
           </div>
+
           <div class='col-2'>
             <div class="btn-group" role="group" aria-label="Basic example">
               <button type="button" class="btn text-light btn-primary reset-task" data-id="">Reiniciar</button>
@@ -91,22 +123,32 @@
           <div class='col-2'>
             Task Name
           </div>
+
           <div class='col-6'>
             <button class='btn'>
               18/09/2021<i class="bi bi-align-bottom"></i>
-              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Data Inicio</span>
+              <span class="simple-badge">
+                Data Inicio
+              </span>
             </button>
 
             <button class='btn'>
               19:03:30<i class="bi bi-align-bottom"></i>
-              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Horário Inicio</span>
+              <span class="simple-badge">
+                Horário Inicio
+              </span>
             </button>
 
             <button class='btn'>
               00:20:03<i class="bi bi-align-bottom"></i>
-              <span style="top: -10px" class="position-relative translate-middle badge rounded-pill bg-danger">Tempo Duração</span>
+              <span class="simple-badge">
+                Tempo Duração
+              </span>
             </button>
           </div>
+
+   
+          
           <div class='col-2'>
             <div class="btn-group" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-primary">Reiniciar</button>
